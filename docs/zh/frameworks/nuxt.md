@@ -76,7 +76,7 @@ Nuxt 模块预配置了以下内容：
 
 - [`cookies`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) 作为存储。
 - [`store.$id`](https://pinia.vuejs.org/api/interfaces/pinia.StoreProperties.html) 作为 storage 的默认 key。
-- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://github.com/unjs/destr) 作为序列化器/反序列化器。
+- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://unjs.io/packages/destr) 作为序列化器/反序列化器。
 - 整个状态将持久化到存储中。
 
 ## 选择存储

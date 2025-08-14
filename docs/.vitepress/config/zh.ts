@@ -6,7 +6,7 @@ export const zh: LocaleSpecificConfig<DefaultTheme.Config> = {
   themeConfig: {
     editLink: {
       text: '建议对此页面进行更改',
-      pattern: 'https://github.com/prazdevs/pinia-plugin-persistedstate/edit/main/docs/:path',
+      pattern: 'https://codeberg.org/praz/pinia-plugin-persistedstate/_edit/main/docs/:path',
     },
     docFooter: {
       prev: '上一页',
@@ -43,7 +43,7 @@ export const zh: LocaleSpecificConfig<DefaultTheme.Config> = {
           {
             items: [{
               text: '发行说明',
-              link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/releases',
+              link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/releases',
             }],
           },
           {
@@ -56,15 +56,15 @@ export const zh: LocaleSpecificConfig<DefaultTheme.Config> = {
               },
               {
                 text: '3.2.2',
-                link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/tree/v3',
+                link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/v3',
               },
               {
                 text: '2.4.0',
-                link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/tree/v2',
+                link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/v2',
               },
               {
                 text: '1.6.3',
-                link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/tree/v2',
+                link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/v1',
               },
             ],
           },
@@ -92,7 +92,7 @@ export const zh: LocaleSpecificConfig<DefaultTheme.Config> = {
     ],
     footer: {
       message: '基于 MIT 许可发布。',
-      copyright: '版权所有 © 2021 年至今 Sacha Bouillez 及贡献者',
+      copyright: '版权所有 © 2021 年至今 praz 及贡献者',
     },
 
   },

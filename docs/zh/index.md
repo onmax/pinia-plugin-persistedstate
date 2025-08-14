@@ -11,8 +11,8 @@ hero:
       text: 开始使用
       link: /zh/guide/
     - theme: alt
-      text: 在GitHub上查看
-      link: https://github.com/prazdevs/pinia-plugin-persistedstate
+      text: 在Codeberg上查看
+      link: https://codeberg.org/praz/pinia-plugin-persistedstate
   image:
     light: /logo-light.svg
     dark: /logo-dark.svg

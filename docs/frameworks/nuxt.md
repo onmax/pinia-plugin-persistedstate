@@ -76,7 +76,7 @@ The Nuxt module comes pre-configured with the following:
 
 - [`cookies`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) as storage.
 - [`store.$id`](https://pinia.vuejs.org/api/interfaces/pinia.StoreProperties.html) as default key for storage.
-- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://github.com/unjs/destr) as serializer/deserializer.
+- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://unjs.io/packages/destr) as serializer/deserializer.
 - The whole state is persisted to the storage.
 
 ## Choosing a storage

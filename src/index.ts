@@ -25,7 +25,7 @@ export type PluginOptions = Pick<
 
 /**
  * Create a Pinia persistence plugin.
- * @see https://prazdevs.github.io/pinia-plugin-persistedstate/
+ * @see https://codeberg.org/praz/pinia-plugin-persistedstate
  */
 export function createPersistedState(options: PluginOptions = {}) {
   return function (context: PiniaPluginContext) {
@@ -51,6 +51,6 @@ export function createPersistedState(options: PluginOptions = {}) {
 
 /**
  * Pinia plugin to persist stores.
- * @see https://prazdevs.github.io/pinia-plugin-persistedstate/
+ * @see https://codeberg.org/praz/pinia-plugin-persistedstate
  */
 export default createPersistedState()

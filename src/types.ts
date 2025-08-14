@@ -31,7 +31,7 @@ export interface Serializer {
   /**
    * Deserializes string into state before hydrating.
    * @default destr
-   * @see https://github.com/unjs/destr
+   * @see https://unjs.io/packages/destr
    */
   deserialize: (data: string) => StateTree
 }
@@ -91,7 +91,7 @@ declare module 'pinia' {
   export interface DefineStoreOptionsBase<S extends StateTree, Store> {
     /**
      * Persist store in storage
-     * @see https://prazdevs.github.io/pinia-plugin-persistedstate
+     * @see https://codeberg.org/praz/pinia-plugin-persistedstate
      */
     persist?: Persist<S>
   }

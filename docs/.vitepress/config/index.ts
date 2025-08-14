@@ -15,7 +15,7 @@ export default defineConfig({
     }],
   ],
   sitemap: {
-    hostname: 'https://prazdevs.github.io/pinia-plugin-persistedstate/',
+    hostname: 'https://praz.codeberg.page/pinia-plugin-persistedstate/',
   },
   lastUpdated: true,
   markdown: {
@@ -61,8 +61,8 @@ export default defineConfig({
     },
     socialLinks: [
       {
-        icon: 'github',
-        link: 'https://github.com/prazdevs/pinia-plugin-persistedstate',
+        icon: 'codeberg',
+        link: 'https://praz.codeberg.page/pinia-plugin-persistedstate',
       },
     ],
   },

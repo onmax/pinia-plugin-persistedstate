@@ -6,7 +6,7 @@
 
 > Configurable persistence and rehydration of Pinia stores.
 
-[**_Read the full documentation_**](https://prazdevs.github.io/pinia-plugin-persistedstate)
+[**_Read the full documentation_**](https://praz.codeberg.page/pinia-plugin-persistedstate)
 
 ## Features
 
@@ -61,7 +61,7 @@ export const useStore = defineStore('store', () => {
 })
 ```
 
-All the available configuration options are explained [here](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/config).
+All the available configuration options are explained [here](https://praz.codeberg.page/pinia-plugin-persistedstate/guide/config).
 
 ## Usage with Nuxt
 
@@ -76,23 +76,23 @@ export default defineNuxtConfig({
 })
 ```
 
-More information on storages and configuration in Nuxt [here](https://prazdevs.github.io/pinia-plugin-persistedstate/frameworks/nuxt).
+More information on storages and configuration in Nuxt [here](https://praz.codeberg.page/pinia-plugin-persistedstate/frameworks/nuxt).
 
 ## Limitations
 
-There are several limitations that should be considered, more on those [here](https://prazdevs.github.io/pinia-plugin-persistedstate/guide/limitations).
+There are several limitations that should be considered, more on those [here](https://praz.codeberg.page/pinia-plugin-persistedstate/guide/limitations).
 
 ## Contributing
 
-See the [contribution guide](https://github.com/prazdevs/pinia-plugin-persistedstate/blob/main/CONTRIBUTING.md).
+See the [contribution guide](https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/main/CONTRIBUTING.md).
 
 ## License
 
-[MIT](https://github.com/prazdevs/pinia-plugin-persistedstate/blob/main/LICENSE) © 2021-present [Sacha Bouillez](https://github.com/prazdevs)
+[MIT](https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/main/LICENSE) © 2021-present [praz](https://codeberg.org/praz)
 
 [version-src]: https://img.shields.io/npm/v/pinia-plugin-persistedstate?style=flat-square&labelColor=313244&color=cba6f7
 [version-href]: https://npmjs.com/package/pinia-plugin-persistedstate
 [bundle-src]: https://img.shields.io/bundlejs/size/pinia-plugin-persistedstate?style=flat-square&labelColor=313244&color=cba6f7
 [bundle-href]: https://bundlejs.com/?q=pinia-plugin-persistedstate
-[license-src]: https://img.shields.io/github/license/prazdevs/pinia-plugin-persistedstate?style=flat-square&labelColor=313244&color=cba6f7
-[license-href]: https://github.com/prazdevs/pinia-plugin-persistedstate/blob/main/LICENSE
+[license-src]: https://img.shields.io/npm/l/pinia-plugin-persistedstate?style=flat-square&labelColor=313244&color=cba6f7
+[license-href]: https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/main/LICENSE

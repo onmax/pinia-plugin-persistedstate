@@ -6,7 +6,7 @@ export const en: LocaleSpecificConfig<DefaultTheme.Config> = {
   themeConfig: {
     editLink: {
       text: 'Suggest changes to this page',
-      pattern: 'https://github.com/prazdevs/pinia-plugin-persistedstate/edit/main/docs/:path',
+      pattern: 'https://codeberg.org/praz/pinia-plugin-persistedstate/_edit/main/docs/:path',
     },
     nav: [
       {
@@ -27,7 +27,7 @@ export const en: LocaleSpecificConfig<DefaultTheme.Config> = {
           {
             items: [{
               text: 'Release Notes',
-              link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/releases',
+              link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/releases',
             }],
           },
           {
@@ -40,15 +40,15 @@ export const en: LocaleSpecificConfig<DefaultTheme.Config> = {
               },
               {
                 text: '3.2.2',
-                link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/tree/v3',
+                link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/v3',
               },
               {
                 text: '2.4.0',
-                link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/tree/v2',
+                link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/v2',
               },
               {
                 text: '1.6.3',
-                link: 'https://github.com/prazdevs/pinia-plugin-persistedstate/tree/v2',
+                link: 'https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/v1',
               },
             ],
           },
@@ -76,7 +76,7 @@ export const en: LocaleSpecificConfig<DefaultTheme.Config> = {
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2021-present Sacha Bouillez & contributors',
+      copyright: 'Copyright © 2021-present praz & contributors',
     },
 
   },

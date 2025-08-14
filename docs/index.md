@@ -11,8 +11,8 @@ hero:
       text: Get Started
       link: /guide/
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/prazdevs/pinia-plugin-persistedstate
+      text: View on Codeberg
+      link: https://codeberg.org/praz/pinia-plugin-persistedstate
   image:
     light: /logo-light.svg
     dark: /logo-dark.svg
