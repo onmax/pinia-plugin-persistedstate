@@ -1,7 +1,7 @@
 # Inspired by https://github.com/antfu/.github
-name: 🚀 New feature proposal
+name: New feature proposal
 description: Propose a new feature
-labels: [✨ enhancement]
+labels: [enhancement]
 body:
   - type: markdown
     attributes:

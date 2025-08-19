@@ -1,0 +1,24 @@
+# Inspired by https://github.com/antfu/.github
+name: Question
+description: Ask a question regarding the package or its documentation
+labels: [pending triage]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: Ask your question with as much context as possible.
+      placeholder: Bug description
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Validations
+      description: Before submitting the issue, please make sure you do the following
+      options:
+        - label: Follow our [Code of Conduct](https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/main/CODE_OF_CONDUCT.md)
+          required: true
+        - label: Check that there isn't already an issue that asked your question to avoid creating a duplicate.
+          required: true

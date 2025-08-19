@@ -1,8 +1,9 @@
 # Inspired by https://github.com/antfu/.github
+blank_issues_enabled: false
 contact_links:
-  - name: 🙌 Contribution Guide
+  - name: Contribution Guide
     url: https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/main/CONTRIBUTING.md
     about: Please read through before making contributions.
-  - name: ⁉️ Why and How to make a reproduction?
+  - name: Why and How to make a reproduction?
     url: https://antfu.me/posts/why-reproductions-are-required
-    about: A great article by Anthony Fu (@antfu) on why reproduction is very important for maintainer to help on your issues!
+    about: A great article by Anthony Fu (@antfu) on why reproduction is very important for maintainers to help on your issues!

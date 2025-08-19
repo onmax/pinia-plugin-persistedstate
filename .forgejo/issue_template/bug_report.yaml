@@ -1,7 +1,7 @@
 # Inspired by https://github.com/antfu/.github
-name: 🐛 Bug report
+name: Bug report
 description: Report an issue
-labels: [🔍️ pending triage]
+labels: [pending triage]
 body:
   - type: markdown
     attributes:
