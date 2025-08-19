@@ -1,14 +1,16 @@
-name: release
+name: ci
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
-    if: github.repository == 'prazdevs/pinia-plugin-persistedstate'
+  ci:
+    runs-on: codeberg-tiny
 
     steps:
       - name: Checkout
@@ -20,9 +22,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          registry-url: 'https://registry.npmjs.org'
           node-version: lts/*
-          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -30,10 +30,14 @@ jobs:
       - name: Prepare playground
         run: pnpm dev:prepare
 
+      - name: Lint
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm typecheck
+
       - name: Build
         run: pnpm build
 
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publint
+        run: pnpm publint
