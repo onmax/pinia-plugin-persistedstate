@@ -54,6 +54,8 @@ jobs:
         working_directory: /tmp/pages
         run: |
           git init
+          git config user.name ${{ vars.git_name }}
+          git config user.email ${{ vars.git_email }}
           git branch -m pages
           git remote add pages git@codeberg.org:${{ forge.repository }}
           git add -A
