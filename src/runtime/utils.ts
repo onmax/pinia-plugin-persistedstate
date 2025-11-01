@@ -10,8 +10,10 @@ function get(obj: object, path: Array<string | number>) {
   let value = obj
 
   for (let i = 0; i < path.length; i++) {
-    if (value == null || (value as Indexable)[path[i]!] == null)
+    if (value === undefined || (value as Indexable)[path[i]!] === undefined)
       return undefined
+    if (value === null || (value as Indexable)[path[i]!] === null)
+      return null
 
     value = (value as Indexable)[path[i]!]
   }
