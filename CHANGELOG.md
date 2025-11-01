@@ -1,5 +1,25 @@
 # Changelog
 
+## v4.7.0
+
+[compare changes](https://codeberg.org/praz/pinia-plugin-persistedstate/compare/v4.6.0...v4.7.0)
+
+### 🚀 Enhancements
+
+- Deserialize with JSON.parse (e7e5305)
+
+### 🩹 Fixes
+
+- Pick `null` values properly (883cc3a)
+
+### 📦 Build
+
+- Move to tsdown (#416)
+
+### ❤️ Contributors
+
+- praz <dev@praz.me>
+
 ## v4.6.0
 
 [compare changes](https://codeberg.org/praz/pinia-plugin-persistedstate/compare/v4.5.0...v4.6.0)
