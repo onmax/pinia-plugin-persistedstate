@@ -1,5 +1,22 @@
 # Changelog
 
+## v4.6.0
+
+[compare changes](https://codeberg.org/praz/pinia-plugin-persistedstate/compare/v4.5.0...v4.6.0)
+
+### 🚀 Enhancements
+
+- Allow function key option (#412)
+
+### 🏡 Chore
+
+- Move to codeberg (update references) (377a8dd)
+- Update dependencies (7288c31)
+
+### ❤️ Contributors
+
+- praz <dev@praz.me>
+
 ## v4.5.0
 
 [compare changes](https://github.com/prazdevs/pinia-plugin-persistedstate/compare/v4.4.1...v4.5.0)
@@ -14,7 +31,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs <hi@praz.dev>
+- praz <dev@praz.me>
 
 ## v4.4.1
 
@@ -26,7 +43,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](https://github.com/prazdevs))
+- praz <dev@praz.me>
 
 ## v4.4.0
 
@@ -48,7 +65,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](https://github.com/prazdevs))
+- praz <dev@praz.me>
 
 ## v4.3.0
 
@@ -83,7 +100,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](https://github.com/prazdevs))
+- praz <dev@praz.me>
 - Ian Jamieson <i@njamieson.co.uk>
 
 ## v4.2.0
@@ -105,7 +122,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](http://github.com/prazdevs))
+- praz <dev@praz.me>
 - Donald Shtjefni ([@dnldsht](http://github.com/dnldsht))
 
 ## v4.1.3
@@ -127,7 +144,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](http://github.com/prazdevs))
+- praz <dev@praz.me>
 - Erian ([@catcoal](http://github.com/catcoal))
 
 ## v4.1.2
@@ -149,7 +166,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](http://github.com/prazdevs))
+- praz <dev@praz.me>
 - Chong Li ([@TIX007](http://github.com/TIX007))
 
 ## v4.1.1
@@ -162,7 +179,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](http://github.com/prazdevs))
+- praz <dev@praz.me>
 
 ## v4.1.0
 
@@ -182,7 +199,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](http://github.com/prazdevs))
+- praz <dev@praz.me>
 - Charlie ✨ ([@MIGU-EDU](http://github.com/MIGU-EDU))
 
 ## v4.0.2
@@ -205,7 +222,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](http://github.com/prazdevs))
+- praz <dev@praz.me>
 
 ## v4.0.1
 
@@ -276,7 +293,7 @@
 
 ### ❤️ Contributors
 
-- Prazdevs ([@prazdevs](http://github.com/prazdevs))
+- praz <dev@praz.me>
 
 ***
 
