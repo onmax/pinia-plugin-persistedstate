@@ -9,7 +9,7 @@
   "homepage": "https://praz.codeberg.page/pinia-plugin-persistedstate",
   "repository": {
     "type": "git",
-    "url": "git+https://codeberg.org/praz/pinia-plugin-persistedstate.git"
+    "url": "https://codeberg.org/praz/pinia-plugin-persistedstate.git"
   },
   "bugs": {
     "url": "https://codeberg.org/praz/pinia-plugin-persistedstate/issues"
@@ -47,13 +47,12 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm build:plugin && pnpm build:umd && pnpm build:module",
-    "build:plugin": "tsup src/index.ts --dts --format esm,cjs",
+    "build": "pnpm build:plugin && pnpm build:module",
+    "build:plugin": "tsdown",
     "build:module": "nuxt-module-build build --outDir dist/nuxt",
-    "build:umd": "rollup -c rollup.config.js",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "dev:prepare": "nuxt-module-build prepare && nuxi prepare playground",
     "release": "changelogen --release --push",
     "docs": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -84,9 +83,7 @@
     }
   },
   "dependencies": {
-    "deep-pick-omit": "^1.2.1",
-    "defu": "^6.1.4",
-    "destr": "^2.0.5"
+    "defu": "^6.1.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
@@ -114,6 +111,7 @@
     "rollup": "^4.52.5",
     "rollup-plugin-esbuild": "^6.2.1",
     "simple-git-hooks": "^2.13.1",
+    "tsdown": "^0.15.12",
     "tsup": "^8.5.0",
     "typescript": "~5.9.3",
     "vitepress": "^1.6.4",
