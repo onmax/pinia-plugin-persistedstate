@@ -4,7 +4,7 @@
 
 - [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) 作为存储。
 - [`store.$id`](https://pinia.vuejs.org/api/interfaces/pinia.StoreProperties.html) 作为存储的默认 key。
-- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://unjs.io/packages/destr) 作为序列化器/反序列化器。
+- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`JSON.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) 作为序列化器/反序列化器。
 - 整个状态将持久化到存储中。
 
 > [!WARNING] 使用 NUXT ？
@@ -99,7 +99,7 @@ export const useStore = defineStore('store', {
 ## serializer
 
 - **类型**: [`Serializer`](https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/main/src/types.ts#L23-L37)
-- **默认值**: [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://unjs.io/packages/destr)
+- **默认值**: [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`JSON.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
 自定义序列化程序，用于在持久化之前序列化数据，并在解除冻结存储之前反序列化数据。 必须有 `serialize: (value: StateTree) => string` 和 `deserialize: (value: string) => StateTree` 方法。
 

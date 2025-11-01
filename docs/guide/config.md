@@ -4,7 +4,7 @@ The plugin comes pre-configured with the following:
 
 - [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) as storage.
 - [`store.$id`](https://pinia.vuejs.org/api/interfaces/pinia.StoreProperties.html) as default key for storage.
-- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://unjs.io/packages/destr) as serializer/deserializer.
+- [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`JSON.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) as serializer/deserializer.
 - The whole state is persisted to the storage.
 
 > [!WARNING] USING NUXT ?
@@ -99,7 +99,7 @@ This store will be persisted in [`sessionStorage`](https://developer.mozilla.org
 ## serializer
 
 - **type**: [`Serializer`](https://codeberg.org/praz/pinia-plugin-persistedstate/src/branch/main/src/types.ts#L23-L37)
-- **default**: [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`destr`](https://unjs.io/packages/destr)
+- **default**: [`JSON.stringify`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)/[`JSON.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
 
 Custom serializer to serialize data before persisted and deserialize data before rehydrating the store. Must have `serialize: (value: StateTree) => string` and `deserialize: (value: string) => StateTree` methods.
 

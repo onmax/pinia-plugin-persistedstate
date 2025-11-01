@@ -1,6 +1,5 @@
-import type { PiniaPluginContext } from 'pinia'
+import type { PiniaPluginContext, StateTree } from 'pinia'
 import type { PersistenceOptions, Serializer, StorageLike } from './types'
-import { destr } from 'destr'
 import { createPersistence, parsePersistKey } from './runtime/core'
 
 export type { PersistenceOptions, Serializer, StorageLike }
@@ -39,7 +38,7 @@ export function createPersistedState(options: PluginOptions = {}) {
           debug: p.debug ?? options.debug ?? false,
           serializer: p.serializer ?? options.serializer ?? {
             serialize: data => JSON.stringify(data),
-            deserialize: data => destr(data),
+            deserialize: data => JSON.parse(data) as StateTree,
           },
           storage: p.storage ?? options.storage ?? window.localStorage,
           beforeHydrate: p.beforeHydrate ?? options.beforeHydrate,

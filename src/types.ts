@@ -47,8 +47,8 @@ export interface Serializer {
 
   /**
    * Deserializes string into state before hydrating.
-   * @default destr
-   * @see https://unjs.io/packages/destr
+   * @default JSON.parse
+   * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
    */
   deserialize: (data: string) => StateTree
 }
