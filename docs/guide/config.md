@@ -45,7 +45,7 @@ export const useStore = defineStore('main', {
 
 ## key
 
-- **type**: `string`
+- **type**: `string | ($id: string) => string`
 - **default**: `store.$id`
 
 Key used to reference the stored deserialized data in the storage.

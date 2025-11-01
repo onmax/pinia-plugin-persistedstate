@@ -9,9 +9,10 @@ on:
       - main
     paths:
       - src/*
+      - test/*
       - package.json
       - pnpm-lock.yaml
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   ci:
@@ -43,6 +44,9 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Test
+        run: pnpm test
 
       - name: Publint
         run: pnpm publint

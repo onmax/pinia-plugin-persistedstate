@@ -37,10 +37,6 @@ export interface Serializer {
 }
 
 export interface Persistence<State extends StateTree = StateTree> {
-  /**
-   * Storage key to use.
-   * @default $store.id
-   */
   key: string
 
   /**
@@ -81,7 +77,13 @@ export interface Persistence<State extends StateTree = StateTree> {
 }
 
 export type PersistenceOptions<State extends StateTree = StateTree>
-  = Partial<Persistence<State>>
+  = Partial<Omit<Persistence<State>, 'key'>> & {
+    /**
+     * Storage key to use.
+     * @default $store.id
+     */
+    key?: ((s: string) => string) | string
+  }
 
 export type Persist<State extends StateTree = StateTree>
   = boolean | PersistenceOptions<State> | PersistenceOptions<State>[]

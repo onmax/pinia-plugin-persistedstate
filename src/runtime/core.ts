@@ -70,6 +70,17 @@ function persistState(
   }
 }
 
+export function parsePersistKey(
+  key: PersistenceOptions['key'],
+  storeId: string,
+) {
+  return typeof key === 'function'
+    ? key(storeId)
+    : typeof key === 'string'
+      ? key
+      : storeId
+}
+
 export function createPersistence(
   context: PiniaPluginContext,
   optionsParser: (p: PersistenceOptions) => Persistence,
@@ -81,6 +92,7 @@ export function createPersistence(
     return
 
   // HMR handling, ignore stores created as 'hot' stores
+  // v8 ignore if -- @preserve
   if (!(store.$id in pinia.state.value)) {
     // @ts-expect-error `_s` is a stripped @internal
     const originalStore = (pinia._s as Map<string, StoreGeneric>).get(store.$id.replace('__hot:', ''))

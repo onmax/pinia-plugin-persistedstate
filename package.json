@@ -60,7 +60,11 @@
     "docs:preview": "vitepress preview docs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "postinstall": "pnpm dev:prepare",
     "publint": "publint",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
     "typecheck": "nuxi typecheck"
   },
   "peerDependencies": {
@@ -95,10 +99,13 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@shikijs/vitepress-twoslash": "^3.14.0",
     "@types/node": "^24.9.2",
+    "@vitest/coverage-v8": "^4.0.6",
+    "@vitest/ui": "^4.0.6",
     "changelogen": "^0.6.2",
     "esbuild": "^0.25.11",
     "eslint": "^9.39.0",
     "eslint-plugin-format": "^1.0.2",
+    "happy-dom": "^20.0.10",
     "lint-staged": "^16.2.6",
     "nuxt": "^4.2.0",
     "pinia": "^3.0.3",
@@ -111,6 +118,7 @@
     "typescript": "~5.9.3",
     "vitepress": "^1.6.4",
     "vitepress-plugin-group-icons": "^1.6.5",
+    "vitest": "^4.0.6",
     "vue": "^3.5.22",
     "vue-tsc": "^3.1.2"
   },
