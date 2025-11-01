@@ -59,7 +59,6 @@
     "docs:preview": "vitepress preview docs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "postinstall": "pnpm dev:prepare",
     "publint": "publint",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
