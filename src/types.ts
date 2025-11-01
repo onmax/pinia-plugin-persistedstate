@@ -81,10 +81,10 @@ export interface Persistence<State extends StateTree = StateTree> {
 }
 
 export type PersistenceOptions<State extends StateTree = StateTree>
- = Partial<Persistence<State>>
+  = Partial<Persistence<State>>
 
 export type Persist<State extends StateTree = StateTree>
- = boolean | PersistenceOptions<State> | PersistenceOptions<State>[]
+  = boolean | PersistenceOptions<State> | PersistenceOptions<State>[]
 
 declare module 'pinia' {
   // eslint-disable-next-line unused-imports/no-unused-vars
