@@ -62,7 +62,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'codeberg',
-        link: 'https://praz.codeberg.page/pinia-plugin-persistedstate',
+        link: 'https://codeberg.org/praz/pinia-plugin-persistedstate',
       },
     ],
   },
