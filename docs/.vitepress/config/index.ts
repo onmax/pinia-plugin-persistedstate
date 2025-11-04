@@ -1,3 +1,4 @@
+import type { Plugin } from 'vitepress'
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
@@ -27,7 +28,7 @@ export default defineConfig({
             types: ['pinia-plugin-persistedstate'],
           },
         },
-      }),
+      }) as Plugin,
     ],
     theme: {
       dark: 'catppuccin-mocha',
@@ -47,7 +48,7 @@ export default defineConfig({
           'npm': 'catppuccin:npm',
           'yarn': 'catppuccin:yarn',
         },
-      }),
+      }) as Plugin,
     ],
   },
   themeConfig: {
