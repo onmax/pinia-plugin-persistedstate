@@ -13,6 +13,7 @@ function hydrateStore(
     omit,
     beforeHydrate,
     afterHydrate,
+    onHydrateError,
   }: Persistence,
   context: PiniaPluginContext,
   runHooks = true,
@@ -40,6 +41,8 @@ function hydrateStore(
   catch (error) {
     if (debug)
       console.error('[pinia-plugin-persistedstate]', error)
+    if (onHydrateError)
+      onHydrateError(error as Error, store)
   }
 }
 
@@ -52,7 +55,9 @@ function persistState(
     debug,
     pick,
     omit,
+    onPersistError,
   }: Persistence,
+  context: PiniaPluginContext,
 ) {
   try {
     const picked = pick
@@ -67,6 +72,8 @@ function persistState(
   catch (error) {
     if (debug)
       console.error('[pinia-plugin-persistedstate]', error)
+    if (onPersistError)
+      onPersistError(error as Error, context.store)
   }
 }
 
@@ -117,7 +124,7 @@ export function createPersistence(
 
   store.$persist = () => {
     persistences.forEach((p) => {
-      persistState(store.$state, p)
+      persistState(store.$state, p, context)
     })
   }
 
@@ -125,7 +132,7 @@ export function createPersistence(
     hydrateStore(store, p, context)
 
     store.$subscribe(
-      (_mutation, state) => persistState(state, p),
+      (_mutation, state) => persistState(state, p, context),
       { detached: true },
     )
   })

@@ -9,7 +9,13 @@ export type { PersistenceOptions, Serializer, StorageLike }
  */
 export type PluginOptions = Pick<
   PersistenceOptions,
-  'storage' | 'debug' | 'serializer' | 'afterHydrate' | 'beforeHydrate'
+  | 'storage'
+  | 'debug'
+  | 'serializer'
+  | 'afterHydrate'
+  | 'beforeHydrate'
+  | 'onHydrateError'
+  | 'onPersistError'
 > & {
   /**
    * Global key generator, allow pre/postfixing store keys.
@@ -43,6 +49,8 @@ export function createPersistedState(options: PluginOptions = {}) {
           storage: p.storage ?? options.storage ?? window.localStorage,
           beforeHydrate: p.beforeHydrate ?? options.beforeHydrate,
           afterHydrate: p.afterHydrate ?? options.afterHydrate,
+          onHydrateError: p.onHydrateError ?? options.onHydrateError,
+          onPersistError: p.onPersistError ?? options.onPersistError,
           pick: p.pick,
           omit: p.omit,
         }

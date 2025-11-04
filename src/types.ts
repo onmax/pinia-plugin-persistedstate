@@ -1,4 +1,4 @@
-import type { PiniaPluginContext, StateTree } from 'pinia'
+import type { PiniaPluginContext, StateTree, Store } from 'pinia'
 
 type IsAny<T> = unknown extends T ? ([keyof T] extends [never] ? false : true) : false
 type ExcludeArrayKeys<T> = T extends ArrayLike<any> ? Exclude<keyof T, keyof any[]> : keyof T
@@ -81,6 +81,16 @@ export interface Persistence<State extends StateTree = StateTree> {
    * Hook called after hydrating store.
    */
   afterHydrate?: (context: PiniaPluginContext) => void
+
+  /**
+   * Hook called when an error is caught while hydrating.
+   */
+  onHydrateError?: (error: Error, store: Store<string, State>) => void
+
+  /**
+   * Hook called when an error is caught while persisting.
+   */
+  onPersistError?: (error: Error, store: Store<string, State>) => void
 
   /**
    * Dot-notation paths to pick from state before persisting.

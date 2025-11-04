@@ -386,6 +386,52 @@ describe('default', () => {
     })
   })
 
+  describe('w/ onError hooks', () => {
+    it('hooks into onPersistError', async () => {
+      const onPersistError = vi.fn()
+      const error = new Error('persist_error')
+      const useStore = defineStore(KEY, {
+        state: () => ({ lorem: '' }),
+        persist: {
+          storage: {
+            getItem: localStorage.getItem,
+            setItem: (_key, _value) => {
+              throw error
+            },
+          },
+          onPersistError,
+        },
+      })
+
+      const store = useStore()
+      store.lorem = 'ipsum'
+      await nextTick()
+
+      expect(onPersistError).toHaveBeenCalledWith(error, store)
+    })
+
+    it('hooks into onHydrateError', async () => {
+      const onHydrateError = vi.fn()
+      const error = new Error('persist_error')
+      const useStore = defineStore(KEY, {
+        state: () => ({ lorem: '' }),
+        persist: {
+          storage: {
+            getItem: (_key) => {
+              throw error
+            },
+            setItem: localStorage.setItem,
+          },
+          onHydrateError,
+        },
+      })
+
+      const store = useStore()
+
+      expect(onHydrateError).toHaveBeenCalledWith(error, store)
+    })
+  })
+
   describe('w/ serializer', () => {
     it('deserializes', async () => {
       initializeLocalStorage(KEY, { lorem: 'ipsum' })
