@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`exports snapshot 1`] = `
+{
+  ".": {
+    "createPersistedState": "function",
+    "default": "function",
+  },
+  "./nuxt": {
+    "default": "function",
+  },
+}
+`;

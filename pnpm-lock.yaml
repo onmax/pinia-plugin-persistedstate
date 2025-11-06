@@ -90,6 +90,9 @@ importers:
       vitest:
         specifier: ^4.0.6
         version: 4.0.6(@types/debug@4.1.12)(@types/node@24.10.0)(@vitest/ui@4.0.6)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.43.1)(yaml@2.8.1)
+      vitest-package-exports:
+        specifier: ^0.1.1
+        version: 0.1.1
       vue:
         specifier: ^3.5.22
         version: 3.5.22(typescript@5.9.3)
@@ -5712,6 +5715,9 @@ packages:
         optional: true
       postcss:
         optional: true
+
+  vitest-package-exports@0.1.1:
+    resolution: {integrity: sha512-rXgU5noxaaMA5VJXgVPhXRzPiQ1WFmWwgo8dQFPg9j/yFM028scO0IAylFHVI8XMRevhozEt1usa6RQYQY26lg==}
 
   vitest@4.0.6:
     resolution: {integrity: sha512-gR7INfiVRwnEOkCk47faros/9McCZMp5LM+OMNWGLaDBSvJxIzwjgNFufkuePBNaesGRnLmNfW+ddbUJRZn0nQ==}
@@ -12475,6 +12481,11 @@ snapshots:
       - terser
       - typescript
       - universal-cookie
+
+  vitest-package-exports@0.1.1:
+    dependencies:
+      find-up-simple: 1.0.1
+      pathe: 2.0.3
 
   vitest@4.0.6(@types/debug@4.1.12)(@types/node@24.10.0)(@vitest/ui@4.0.6)(happy-dom@20.0.10)(jiti@2.6.1)(terser@5.43.1)(yaml@2.8.1):
     dependencies:
