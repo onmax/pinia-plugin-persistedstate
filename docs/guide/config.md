@@ -249,6 +249,62 @@ This store will log `just hydrated 'store'` _after_ being rehydrated.
 > [!WARNING]
 > Beware of interacting with `PiniaPluginContext`, unexpected behaviors may occur.
 
+## onHydrateError
+
+- **type**: `(error: Error, store: Store) => void`
+- **default**: `undefined`
+
+Hook function run after an error occurred during hydration. The hook gives access to the thrown `error` object and the `store` object. This can be used to handle error encountered during hydration or rethrow the error for it to bubble up.
+
+:::details Example
+
+```ts{8-11} twoslash
+import { defineStore } from 'pinia'
+
+export const useStore = defineStore('store', {
+  state: () => ({
+    someState: 'hello pinia',
+  }),
+  persist: {
+    onHydrateError: (error, store) => {
+      console.log(`on hydrate error`)
+      console.log(error)
+      // handle error
+    }
+  },
+})
+```
+
+:::
+
+## onPersistError
+
+- **type**: `(error: Error, store: Store) => void`
+- **default**: `undefined`
+
+Hook function run after an error occurred during persistence. The hook gives access to the thrown `error` object and the `store` object. This can be used to handle error encountered during persistence or rethrow the error for it to bubble up.
+
+:::details Example
+
+```ts{8-11} twoslash
+import { defineStore } from 'pinia'
+
+export const useStore = defineStore('store', {
+  state: () => ({
+    someState: 'hello pinia',
+  }),
+  persist: {
+    onPersistError: (error, store) => {
+      console.log(`on persist error`)
+      console.log(error)
+      // handle error
+    }
+  },
+})
+```
+
+:::
+
 ## debug
 
 - **type**: `boolean`

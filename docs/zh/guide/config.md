@@ -249,6 +249,62 @@ export const useStore = defineStore('store', {
 > [!WARNING] 警告
 > 当心与 `PiniaPluginContext` 交互，可能会发生意外行为。
 
+## onHydrateError
+
+- **类型**: `(error: Error, store: Store) => void`
+- **默认值**: `undefined`
+
+钩子函数会在hydration报错之后运行。这个钩子可以访问报错的 `error` 对象与 `store` 对象。这可以用来在hydration报错之后执行特定的错误处理或把错误向上传递。
+
+:::details 例子
+
+```ts{8-11} twoslash
+import { defineStore } from 'pinia'
+
+export const useStore = defineStore('store', {
+  state: () => ({
+    someState: 'hello pinia',
+  }),
+  persist: {
+    onHydrateError: (error, store) => {
+      console.log(`on hydrate error`)
+      console.log(error)
+      // handle error
+    }
+  },
+})
+```
+
+:::
+
+## onPersistError
+
+- **type**: `(error: Error, store: Store) => void`
+- **default**: `undefined`
+
+钩子函数会在persistence报错之后运行。这个钩子可以访问报错的 `error` 对象与 `store` 对象。这可以用来在persistence报错之后执行特定的错误处理或把错误向上传递。
+
+:::details 例子
+
+```ts{8-11} twoslash
+import { defineStore } from 'pinia'
+
+export const useStore = defineStore('store', {
+  state: () => ({
+    someState: 'hello pinia',
+  }),
+  persist: {
+    onPersistError: (error, store) => {
+      console.log(`on persist error`)
+      console.log(error)
+      // handle error
+    }
+  },
+})
+```
+
+:::
+
 ## debug
 
 - **类型**: `boolean`
