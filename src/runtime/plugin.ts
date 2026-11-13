@@ -1,5 +1,5 @@
 import type { Pinia, PiniaPluginContext, StateTree } from 'pinia'
-import { defineNuxtPlugin, useRuntimeConfig } from '#app'
+import { defineNuxtPlugin, useNuxtApp, useRuntimeConfig } from '#app'
 import { createPersistence, parsePersistKey } from './core'
 import { storages } from './storages'
 
@@ -7,7 +7,7 @@ function piniaPlugin(context: PiniaPluginContext) {
   const config = useRuntimeConfig()
   const options = config.public.piniaPluginPersistedstate
 
-  createPersistence(
+  const unsubscribe = createPersistence(
     context,
     (p) => {
       const persistKey = parsePersistKey(p.key, context.store.$id)
@@ -34,6 +34,11 @@ function piniaPlugin(context: PiniaPluginContext) {
     },
     options.auto ?? false,
   )
+
+  // `app:rendered` runs on the server only. A watcher left running there keeps the
+  // whole app reachable from any long-lived object in the store's state.
+  if (unsubscribe)
+    useNuxtApp().hook('app:rendered', unsubscribe)
 }
 
 export default defineNuxtPlugin({

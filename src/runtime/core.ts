@@ -128,12 +128,14 @@ export function createPersistence(
     })
   }
 
-  persistences.forEach((p) => {
+  const unsubscribes = persistences.map((p) => {
     hydrateStore(store, p, context)
 
-    store.$subscribe(
+    return store.$subscribe(
       (_mutation, state) => persistState(state, p, context),
       { detached: true },
     )
   })
+
+  return () => unsubscribes.forEach(unsubscribe => unsubscribe())
 }
